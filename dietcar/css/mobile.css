@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+.mobile-only {display: block !important;}
+.pc-only {display: none !important;}
+
+.ux-desc .base,
+.ux-desc.base p {
+	font-size: .875rem;
+}
+main section > article {
+	width: 100%;
+	gap: 60px;
+	padding: 24px 20px 20px;
+}
+article.h4 .ux-title h3 {font-size: 1.25rem;margin-bottom: 8px;}
+
+.ux-form {gap: 24px;}
+.ux-button.h1 {min-width: 0;font-size: 1rem;height: 56px;}
+section.dock >article {padding: 16px 20px 32px;}
+
+.ux-field .ux-field-label {font-size: .875rem;}
+
+.car-number-input,
+.phone-number-input {
+	height: auto;
+    padding: 16px 0;
+    font-size: 1rem;
+    line-height: 1;
+}

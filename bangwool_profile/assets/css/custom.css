@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/* 컬러 정의 */
+:root {
+	--fc-title: #020C22;
+	--fc-content: #21252e;
+	--fc-gray: #848896;
+	--fc-link: #142088;
+
+	--line-01: #f7fbff;
+	--line-02: #d3e2ec;
+	--line-03: rgb(253, 241, 218);
+
+	--bg-fff: #ffffff;
+	--bg-beige: rgb(255, 251, 242);
+	--icon :orange;
+}
+
+/* 공통 정의 */
+body,
+main,
+aside,
+section,
+article.h4,
+article.h4 .content,
+ul,
+ul > li,
+.ui-profile {display: flex;flex-direction: column;}
+
+body{
+	align-items: center;justify-content: center;height:100%;
+	color:var(--fc-title);background:var(--bg-beige);
+}
+.container {
+	display: flex; justify-content: space-between;gap: 60px;
+	max-height:90%;padding: 40px;
+	background-color:var(--bg-fff);border-radius: 20px;
+	box-shadow: 10px 10px 16px rgba(0,0,0,.03), -10px -10px 16px rgba(0,0,0,.03);
+}
+main {
+	flex-grow:1;gap: 40px;width: 400px;
+	overflow-x: hidden; overflow-y: auto; scrollbar-color: #ddd #f1f1f1;
+}
+aside {
+	flex-shrink:0;gap: 20px;
+	max-height: 480px; padding: 20px;
+	border-radius: 16px;border: 1px solid var(--line-03);
+	background-color:var(--bg-beige);box-shadow: 10px 10px 16px rgba(0,0,0,.03);
+}
+
+section {gap: 32px;}
+article.h4 {gap:24px;}
+article.h4 .content {gap:16px;}
+section:not(:first-of-type) {padding-top: 32px;}
+section + section { border-top: 1px solid var(--line-02);}
+
+.h3-title {font-size: 1.6rem;line-height: 1.5;}
+.h4-title {font-size: 1.2rem;line-height: 1.5;}
+.h5-title {font-size: 1rem;}
+
+/* ul li */
+ul {flex-wrap:wrap; gap: 8px;}
+ul > li {gap:4px;line-height: 1.5;}
+
+.text-list ul {display: flex;flex-direction: column;gap: 12px;}
+.text-list li,
+.text-list p {color: var(--fc-content);line-height: 1.5;word-break: keep-all;}
+
+.desc-list {gap: 0px;font-size: 0.875rem;}
+
+.link-list > li {line-height: 1.5;}
+.link-list li p,
+.link-list li .link {font-size: 0.875rem;}
+.link {color:var(--fc-link);font-weight: 800;}
+
+/* bullet - dash */
+.text-list li {position: relative;padding-left: .625rem !important;color:var(--fc-01);}
+.text-list li:before {
+	display: block;position: absolute;
+	top: 0; left: 0px;height: auto;color:var(--fc-content);border-radius: 50%;content: "-";
+}
+
+/* 프로필 이미지 영역*/
+.ui-profile {align-items:center;width: 180px;gap: 16px;}
+.img-box {
+	width:160px;height: 160px;
+	border: 4px solid var(--line-01);border-radius: 50%;
+	box-shadow: 6px 12px 16px rgba(0,0,0,.1);
+}
+.img-wrap {width:100%;height: 100%;border-radius: 50%;overflow: hidden;}
+.img-wrap .img {width: 100%;vertical-align: top;}
+
+.info-box {display: flex;flex-direction:column;gap: 8px;width: 100%;}
+.profile-title {font-size: 1.4rem;font-weight: 800;}
+.sub-title.eng {font-size: 0.875rem;font-weight: 400;color: var(--fc-gray);}
+
+/* fontawesome icon */
+.fa-check,
+.fa-square-check {color: var(--icon);font-size: 1rem;}
+.fa-arrow-up-right-from-square {font-size: 0.625rem;}

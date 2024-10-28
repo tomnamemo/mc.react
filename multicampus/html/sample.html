@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<script>
+		var scores = [100,20,30,60,66,98];
+		totalScore = 0;
+		averageScore = 0;
+		function sum(){
+			totalScore = 0;
+			for (var i=0; i < scores.length; i++){
+				totalScore += scores[i];
+			}
+			return totalScore;
+		}
+
+		function avg(){
+			totalScore = 0;
+			averageScore = (sum()/scores.length).toFixed(2);
+			return averageScore;
+		}
+
+		sum();
+		avg();
+
+		console.log("총점: " + totalScore);
+		console.log("평균: " + averageScore);
+	</script>
+<body>
+
+</body>
+</html>

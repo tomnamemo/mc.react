@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko" class="">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+	<meta name="apple-mobile-web-app-title" content="Default">
+	<meta http-equiv="imagetoolbar" content="no">
+	<meta name="robots" content="no-index, follow">
+	<meta name="title" content="">
+	<meta name="author" content="">
+	<meta name="content" content="">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>현대캐피탈 승계신청</title>
+	<link type="image/png" rel="shortcut icon" href="">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src="lib/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="lib/jquery-ui-1.12.1.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<header></header>
+		<main>
+			<section>
+				<article class="ux-article">
+					<div class="ux-content">
+						<article class="ux-article h4">
+							<div class="ux-title">
+								<h3 class="gap-group level4">자동차 리스, 렌터카 승계 대행을 위한<br class="pc-only" /> 상담신청에 동의해 주세요.
+									<div class="ux-desc">
+										<p class="base">동의시 고객님의 개인정보(차량 계약정보)는 승계상담 및 승계처리에 이용됩니다.</p>
+										<p class="base">※ 승계자 상담은 제휴사인 다이어트카에서 진행</p>
+										<p class="base">고객님이 승계하고자 하는 차량의 번호와 연락처를 남겨주시면, 상담원이 확인 후 연락드리겠습니다.</p>
+									</div>
+								</h3>
+							</div>
+							<div class="ux-content">
+								<form class="ux-form">
+									<div class="ux-field p100">
+										<label class="ux-field-label" for="carNmumber">차량번호</label>
+										<div class="car-number-container">
+											<input type="text" id="carNmumber" class="car-number-input" placeholder="차량번호 입력" title="차량번호 입력">
+										</div>
+									</div>
+									<div class="ux-field p100">
+										<label class="ux-field-label" for="phonePart1">핸드폰 번호</label>
+										<div class="phone-number-container">
+											<span class="fake-placeholder">휴대폰 번호 입력</span>
+											<input type="text" id="phonePart1" class="phone-number-input phone1" maxlength="3" title="휴대폰번호 첫번째 자리 입력">
+											<span class="separator">-</span>
+											<input type="text" id="phonePart2" class="phone-number-input phone2" maxlength="4" title="휴대폰번호 두번째 자리 입력">
+											<span class="separator">-</span>
+											<input type="text" id="phonePart3" class="phone-number-input phone3" maxlength="4" title="휴대폰번호 새번째 자리 입력">
+										</div>
+									</div>
+								</form>
+							</div>
+						</article>
+					</div>
+				</article>
+			</section>
+			<section class="ux-section dock">
+				<article class="ux-article">
+					<div class="ux-content">
+						<div class="ux-button-bar proc">
+							<button class="ux-button contained h1 primary p100" type="button">
+								<span class="label">동의 및 상담신청</span>
+							</button>
+						</div>
+					</div>
+				</article>
+			</section>
+		</main>
+		<footer></footer>
+	</div>
+</body>
+
+</html>
