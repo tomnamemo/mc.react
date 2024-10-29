@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Clock from "./ex02/Clock";
+import MyComponent from "./ex02/MyComponent";
+import Library from "./ex01/Library";
+import Say from "./ex03/Say";
+import EventEx from "./ex04/EventEx";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<>
+			<p>component (molecule)</p>
+			<Library />
+			<hr />
+			<p>setInterval</p>
+			<Clock />
+			<hr />
+			<p>props, defaultProps</p>
+			<MyComponent
+				nam="방굴이"
+				age={9}
+			/>
+			<hr />
+			<p>useState()</p>
+			<Say></Say>
+			<hr />
+			<p>이벤트 핸들링</p>
+			<EventEx />
+		</>
+	);
 }
 
 export default App;
