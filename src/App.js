@@ -9,56 +9,94 @@ import CounterReducer from "./ex05/CounterReducer";
 import Info from "./ex05/Info";
 import InfoReducer from "./ex05/InfoReducer";
 import Average from "./ex05/Average";
-
+import "./App.css";
+import AccordionMui from "./components/AccordionMui";
 function App() {
 	const [visible, setVisible] = useState(false);
 
 	return (
 		<>
-			<h2>2024-10-29</h2>
-			<h3>component (molecule)</h3>
-			{/* <Library /> */}
-			<hr />
-			<h3>setInterval</h3>
-			{/* <Clock /> */}
-			<hr />
-			<h3>props, defaultProps</h3>
-			{/* <MyComponent
-				nam="방굴이"
-				age={9}
-			/> */}
-			<hr />
-			<h3>useState()</h3>
-			{/* <Say></Say> */}
-			<hr />
-			<h3>이벤트 핸들링</h3>
-			{/* <EventEx /> */}
-			<hr />
-			<h2>2024-10-30</h2>
-			<h3>hook- useState(), useEffect()</h3>
-			<Counter />
-			<Info />
-			<hr />
-			<h3>hook - useEffect() 뒷정리 함수 예시</h3>
-			<div>
-				<button
-					onClickCapture={() => {
-						setVisible(!visible);
-					}}
-				>
-					{visible ? "인포컴포넌트 숨기기" : "인포컴포넌트 보여줘"}
-				</button>
-				{visible && <Info />}
-			</div>
-			<hr />
-			<h3>hook - useReducer() ex1</h3>
-			<p>CounterReducer 컴포넌트 함수 바깥에 함수 정의 switch case 문 사용</p>
-			<CounterReducer />
-			<h3>hook - useReducer() ex2</h3>
-			<InfoReducer />
-			<hr />
-			<h3>hook - useMemo() </h3>
-			<Average />
+			<AccordionMui
+				title={
+					<>
+						<h3>
+							chapter 1.
+							<p> component, setInterval(), props , defaultProps, event handling</p>
+						</h3>
+					</>
+				}
+				detail={
+					<>
+						<div className="ui-box">
+							<h4>component (molecule)</h4>
+							<Library />
+						</div>
+						<div className="ui-box">
+							<h4>setInterval</h4>
+							<Clock />
+						</div>
+						<div className="ui-box">
+							<h4>props, defaultProps</h4>
+							<MyComponent
+								nam="방굴이"
+								age={9}
+							/>
+						</div>
+						<div className="ui-box">
+							<h4>useState()</h4>
+							<Say></Say>
+						</div>
+						<div className="ui-box">
+							<h4>이벤트 핸들링</h4>
+							<EventEx />
+						</div>
+					</>
+				}
+			/>
+			<AccordionMui
+				title={
+					<>
+						<h3>
+							chapter 2. <p>useState(), useEffect(), 뒷정리 함수, useReducer(), useMemo()</p>
+						</h3>
+					</>
+				}
+				detail={
+					<>
+						<div className="ui-box">
+							<h4>hook- useState(), useEffect()</h4>
+							<Counter />
+							<Info />
+						</div>
+						<div className="ui-box">
+							<h4>hook - useEffect() 뒷정리 함수 예시</h4>
+							<div>
+								<button
+									onClickCapture={() => {
+										setVisible(!visible);
+									}}
+								>
+									{visible ? "인포컴포넌트 숨기기" : "인포컴포넌트 보여줘"}
+								</button>
+								{visible && <Info />}
+							</div>
+						</div>
+						<div className="ui-box">
+							<h4>hook - useReducer() ex1</h4>
+							<p>CounterReducer 컴포넌트 함수 바깥에 함수 정의 switch case 문 사용</p>
+							<CounterReducer />
+						</div>
+						<div className="ui-box">
+							<h4>hook - useReducer() ex2</h4>
+							<InfoReducer />
+						</div>
+						<div className="ui-box">
+							<h4>hook - useMemo() </h4>
+							<Average />
+						</div>
+					</>
+				}
+			/>
 		</>
 	);
 }
