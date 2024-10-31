@@ -10,9 +10,9 @@ function MyComponent(props) {
 	);
 }
 
-MyComponent.defaultProps = {
-	name: "김방울",
-	children: "폼피츠",
-};
+// MyComponent.defaultProps = {
+// 	name: "김방울",
+// 	children: "폼피츠",
+// };
 
 export default MyComponent;
