@@ -51,5 +51,5 @@
 		"@babel/plugin-proposal-private-property-in-object": "^7.21.11",
 		"babel-loader": "^10.0.0"
 	},
-	"homepage": "https://tomnamemo.github.io/my.react"
+	"homepage": "https://tomnamemo.github.io/mc.react"
 }
